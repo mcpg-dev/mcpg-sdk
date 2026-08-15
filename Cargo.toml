@@ -1,0 +1,23 @@
+[package]
+name = "mcpg-sdk"
+version = "0.1.0-beta.13"
+edition = "2024"
+description = """
+MCPG SDK — umbrella crate that re-exports the public plugin-authoring
+API surface, so downstream plugin code writes `use mcpg_sdk::prelude::*;`
+(or, via the standard cargo package-rename trick, `use mcpg::prelude::*;`)
+instead of juggling `mcpg-plugin-protocol`, `mcpg-plugin-sdk`, and
+`async_trait`. For the gateway binary see the `mcpg` crate; for the
+runtime plugin host see `mcpg-plugin-host`.
+"""
+license = "Apache-2.0"
+repository = "https://github.com/mcpg-dev/mcpg-sdk"
+authors = ["MCPG contributors <opensource@mcpg.dev>"]
+# No `[[bin]]` — this crate ships as a library facade only.
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+mcpg-plugin-protocol = { git = "https://github.com/mcpg-dev/mcpg-plugin-protocol", tag = "v0.1.0-beta.13", version = "=0.1.0-beta.13" }
+mcpg-plugin-sdk = { git = "https://github.com/mcpg-dev/mcpg-plugin-sdk", tag = "v0.1.0-beta.13", version = "=0.1.0-beta.13" }
