@@ -1,6 +1,6 @@
 [package]
 name = "mcpg-sdk"
-version = "0.1.0-rc.5"
+version = "0.1.0-rc.8"
 edition = "2024"
 description = """
 MCPG SDK — umbrella crate that re-exports the public plugin-authoring
@@ -20,4 +20,4 @@ path = "src/lib.rs"
 
 [dependencies]
 mcpg-plugin-protocol = { git = "https://github.com/mcpg-dev/mcpg-plugin-protocol", tag = "v0.1.0-rc.3", version = "=0.1.0-rc.3" }
-mcpg-plugin-sdk = { git = "https://github.com/mcpg-dev/mcpg-plugin-sdk", tag = "v0.1.0-rc.5", version = "=0.1.0-rc.5" }
+mcpg-plugin-sdk = { git = "https://github.com/mcpg-dev/mcpg-plugin-sdk", tag = "v0.1.0-rc.8", version = "=0.1.0-rc.8" }
